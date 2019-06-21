@@ -12,6 +12,11 @@ else()
     add_definitions(-include "Config.hpp")
 endif()
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/library)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/library)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/binary)
+
+
 add_subdirectory(lib)
 add_subdirectory(plugin)
 add_subdirectory(app)
